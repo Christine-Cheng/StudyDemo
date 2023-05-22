@@ -1,0 +1,6 @@
+#!/bin/bash
+strings=`cat TestStr.txt`
+echo "$strings"
+echo "啦啦啦"
+echo $strings
+

@@ -1,0 +1,18 @@
+1.继承Thread类
+子类继承Thread类具备多线程能力
+启动线程：子类对象. start()
+不建议使用：避免OOP单继承局限性
+
+2.实现Runnable接口
+实现接口Runnable具有多线程能力
+启动线程：传入目标对象+Thread对象.start()
+推荐使用：避免单继承局限性，灵活方便，方便同一个对象被多个线程使用
+
+比如一个对象可以放到多个线程中去
+//一份资源
+Thread t01=new thread();
+//多个代理,多个线程跑了一个对象
+new Thread(t01,"小舞").start();
+new Thread(t01,"小三").start();
+new Thread(t01,"小奥").start();
+
