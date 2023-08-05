@@ -274,12 +274,6 @@
             <artifactId>algs4</artifactId>
             <version>1.0.4</version>
         </dependency>
-        <!--&lt;!&ndash; https://mvnrepository.com/artifact/edu.princeton.cs.introcs/stdlib-package &ndash;&gt;
-        <dependency>
-            <groupId>edu.princeton.cs.introcs</groupId>
-            <artifactId>stdlib-package</artifactId>
-            <version>1.0</version>
-        </dependency>-->
         <!-- https://mvnrepository.com/artifact/edu.princeton.cs/randomhash -->
         <dependency>
             <groupId>edu.princeton.cs</groupId>
