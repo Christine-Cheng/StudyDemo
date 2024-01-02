@@ -12,7 +12,7 @@
 
     <modules>
         <module>bill</module>
-        <module>kuangstudy</module>
+        <module>study-kuang</module>
         <module>test</module>
         <module>aop</module>
     </modules>
