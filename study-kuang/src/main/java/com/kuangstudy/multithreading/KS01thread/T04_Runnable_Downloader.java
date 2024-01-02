@@ -31,15 +31,17 @@ public class T04_Runnable_Downloader implements Runnable {
     }
     
     public static void main(String[] args) {
-        T02_Thread_Downloader thread1 = new T02_Thread_Downloader("https://img0.baidu.com/it/u=4078444380,951774016&fm=26&fmt=auto&gp=0.jpg", "小黄人01.jpg");
-        T02_Thread_Downloader thread3 = new T02_Thread_Downloader("https://img1.baidu.com/it/u=3789727041,4194843647&fm=26&fmt=auto&gp=0.jpg", "小黄人02.jpg");
-        T02_Thread_Downloader thread2 = new T02_Thread_Downloader("https://img1.baidu.com/it/u=3833675303,1099592070&fm=26&fmt=auto&gp=0.jpg", "小黄人03.jpg");
-        
+        T02_Thread_Downloader thread1 = new T02_Thread_Downloader("https://img2.baidu.com/it/u=2151538831,3661748864&fm=253&fmt=auto&app=138&f=JPEG?w=800&h=500", "小黄人01.jpg");
+        T02_Thread_Downloader thread3 = new T02_Thread_Downloader("https://img2.baidu.com/it/u=2498623067,847135744&fm=253&fmt=auto&app=120&f=JPEG?w=1280&h=800", "小黄人02.jpg");
+        T02_Thread_Downloader thread2 = new T02_Thread_Downloader("https://img2.baidu.com/it/u=4127395109,1954135995&fm=253&fmt=auto&app=138&f=JPEG?w=889&h=500", "小黄人03.jpg");
+        T02_Thread_Downloader thread4 = new T02_Thread_Downloader("https://img1.baidu.com/it/u=2479956157,2733927645&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=888", "小黄人04.jpg");
+    
         //照理来说是顺序执行,但是实际是由cpu调度执行.谁先调度谁先执行
         //创建行程对象,通过线程对象启动线程(代理)
         new Thread(thread1).start();
         new Thread(thread2).start();
         new Thread(thread3).start();
+        new Thread(thread4).start();
     }
 }
 
