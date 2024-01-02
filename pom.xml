@@ -4,9 +4,9 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
     <groupId>com.study</groupId>
-    <artifactId>my-study</artifactId>
+    <artifactId>study-demo</artifactId>
     <version>1.0-SNAPSHOT</version>
-    <name>my-study</name>
+    <name>StudyDemo</name>
 
     <packaging>pom</packaging>
 
