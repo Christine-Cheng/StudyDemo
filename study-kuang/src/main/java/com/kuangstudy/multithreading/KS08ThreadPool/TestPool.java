@@ -8,6 +8,7 @@ import java.util.concurrent.Executors;
  * //1.创建服务,创建线程池
  * //2.执行
  * //3.关闭连接
+ *
  * @Author Happy
  * @Create 2023/3/28-7:57
  **/
@@ -17,7 +18,7 @@ public class TestPool {
         //newFixedThreadPool 参数为:线程池大小
         ExecutorService executorService = Executors.newFixedThreadPool(20);
         ExecutorService executorService2 = Executors.newFixedThreadPool(20);
-        
+    
         //执行
         //executorService.submit(new MyThread());
         //executorService.submit(new MyThread());

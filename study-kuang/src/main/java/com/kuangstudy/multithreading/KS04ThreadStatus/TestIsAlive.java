@@ -9,7 +9,6 @@ public class TestIsAlive {
     
     /**
      * isAlive方法
-     *
      * @param args
      */
     public static void main(String[] args) {

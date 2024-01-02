@@ -21,7 +21,7 @@ import java.util.concurrent.CopyOnWriteArraySet;
  */
 public class SetTest {
     public static void main(String[] args) {
-        
+    
         //Set<String> set = new HashSet<>();//报错:ConcurrentModificationException
         //Set<String> set = Collections.synchronizedSet(new HashSet<>())
         Set<String> set = new CopyOnWriteArraySet();

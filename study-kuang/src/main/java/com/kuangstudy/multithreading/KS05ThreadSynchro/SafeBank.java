@@ -31,14 +31,13 @@ class DrawingCash2 extends Thread {
     
     
     //取钱
-    
     /**
      * synchronized默认锁的是this,是对象本身.
      * 此处this是银行,银行是锁锁不住的.要锁的是account
      */
     @Override
     public void run() {
-        
+    
         /**
          * 锁的是变化的量,需要增删改的对象.
          */
@@ -48,19 +47,19 @@ class DrawingCash2 extends Thread {
                 System.out.println(Thread.currentThread().getName() + "--->" + "钱不够,去不了");
                 return;
             }
-            
+    
             try {
                 Thread.sleep(1000);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
-            
+    
             //卡内余额=余额-取走的钱
             account2.balance = account2.balance - drawCash;
-            
+    
             //手里的钱
             nowCash = nowCash + drawCash;
-            
+    
             System.out.println(account2.name + "余额为:" + account2.balance);
             //Thread.currentThread().getName() = this.getName()
             System.out.println(this.getName() + "手里的钱:" + nowCash);

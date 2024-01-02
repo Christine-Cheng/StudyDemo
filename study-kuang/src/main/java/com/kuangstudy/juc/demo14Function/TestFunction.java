@@ -18,8 +18,8 @@ public class TestFunction {
                 return s;
             }
         };
-        
-        
+    
+    
         // 简写
         Function<String, Integer> function2 = s -> {
             return s.length();

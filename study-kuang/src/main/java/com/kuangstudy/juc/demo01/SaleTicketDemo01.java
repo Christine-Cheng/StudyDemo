@@ -30,8 +30,8 @@ public class SaleTicketDemo01 {
                 ticket.sale();
             }
         }, "C").start();
-        
-        
+    
+    
     }
 }
 

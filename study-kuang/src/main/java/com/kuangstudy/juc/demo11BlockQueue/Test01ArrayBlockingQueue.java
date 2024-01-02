@@ -6,12 +6,13 @@ import java.util.concurrent.TimeUnit;
 /**
  * @Describe: 队列测试
  * ArrayBlockingQueue：由数组结构组成的有界阻塞队列
- * <p>
+ *
  * 测试队列的api对
  * 1.抛出异常:    添加add()      移除remove()  检测队首元素element()
  * 2.返回特殊值:  添加offer()    移除poll()    检测队首元素peek()
  * 3.等待阻塞:    添加put()      移除take()    检测队首元素(无)
  * 4.超时退出:    添加offer(,,)  移除poll(,,)  检测队首元素(无)
+ *
  * @Author Happy
  * @Create 2023/4/23-16:36
  **/

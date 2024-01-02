@@ -55,7 +55,7 @@ public class T07_Callable_Downloader implements Callable<Boolean> {
     //下载器主体
     @Override
     public Boolean call() {
-        WebDownloader_Callable webDownloader = new WebDownloader_Callable();
+        WebDownloader_Callable webDownloader= new WebDownloader_Callable();
         webDownloader.downloader(url, name);
         System.out.println("下载文件名为" + name);
         return true;
@@ -74,11 +74,11 @@ public class T07_Callable_Downloader implements Callable<Boolean> {
         Future<Boolean> result3 = service.submit(thread3);
         //6. 获取结果：
         boolean rs1 = result1.get();
-        System.out.println("result1--->" + rs1);
-        boolean rs2 = result2.get();
-        System.out.println("result2--->" + rs2);
-        boolean rs3 = result3.get();
-        System.out.println("result3--->" + rs3);
+        System.out.println("result1--->"+rs1);
+        boolean rs2=result2.get();
+        System.out.println("result2--->"+rs2);
+        boolean rs3=result3.get();
+        System.out.println("result3--->"+rs3);
         //7. 关闭服务：
         service.shutdownNow();
         

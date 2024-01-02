@@ -3,8 +3,9 @@ package com.kuangstudy.juc.demo18JmmVoliate;
 /**
  * @Describe: java memory model
  * 实验:代码验证可见性
- * <p>
+ *
  * volatile是不错的可见性机制，但是也不能保证原子性。
+ *
  * @Author Happy
  * @Create 2023/5/3-23:48
  **/

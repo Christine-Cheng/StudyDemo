@@ -64,9 +64,7 @@ public class LazyMan4Reflect2 {
      * 结果:
      * com.kuangstudy.juc.demo20Singleton.LazyMan4Reflect2@5b2133b1
      * com.kuangstudy.juc.demo20Singleton.LazyMan4Reflect2@72ea2f77
-     *
      * @param args
-     *
      * @throws Exception
      */
     public static void main(String[] args) throws Exception {

@@ -70,7 +70,7 @@ class HoldLockThread implements Runnable {
  * 1、查看JDK目录的bin目录
  * 2、使用 jps -l 命令定位进程号
  * 3、使用 jstack 进程号找到死锁查看
- * <p>
+ *
  * 结果:
  * //Java stack information for the threads listed above:
  * //===================================================

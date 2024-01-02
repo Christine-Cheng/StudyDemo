@@ -15,13 +15,13 @@ public class TestJUC {
                 copyOnWriteArrayList.add(Thread.currentThread().getName());
             }).start();
         }
-        
+    
         try {
             Thread.sleep(1000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-        
+    
         System.out.println(copyOnWriteArrayList.size());
         
     }

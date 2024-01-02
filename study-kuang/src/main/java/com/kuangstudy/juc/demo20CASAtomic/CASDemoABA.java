@@ -12,6 +12,7 @@ import java.util.concurrent.atomic.AtomicInteger;
  * 乍看,A在内存中最终的值没有变化.
  * 但是A的值已经变过几次了
  * 由此就是ABA问题
+ *
  * @Author Happy
  * @Create 2023/5/5-21:43
  **/
@@ -23,15 +24,15 @@ public class CASDemoABA {
         /*期望, 更新
         public final boolean compareAndSet(int expect, int update)
         如果期望值达到了,那么就更新,否则,就不更新. CAS是cpu的并发原语*/
-        
+    
         //捣乱的线程
         System.out.println(atomicInteger.compareAndSet(2022, 2023) + "=>" + atomicInteger.get());
         System.out.println(atomicInteger.compareAndSet(2023, 2022) + "=>" + atomicInteger.get());
-        
+    
         //期望的线程
         //期望的是2022，后面改为 2023 ， 所以结果为 true，2020
         System.out.println(atomicInteger.compareAndSet(2022, 2023) + "=>" + atomicInteger.get());
-        
+    
         /**
          * 结果:
          * true=>2023

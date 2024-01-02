@@ -9,7 +9,7 @@ public class TestDeadLock {
     public static void main(String[] args) {
         Makeup girl1 = new Makeup(0, "灰姑娘");
         Makeup girl2 = new Makeup(1, "白雪公主");
-        
+    
         new Thread(girl1).start();
         new Thread(girl2).start();
     }
@@ -51,13 +51,12 @@ class Makeup implements Runnable {
     /**
      * 例子1:
      * 不死锁的方式:把原本相互套住的锁资源放到外面,每个对象一个锁
-     * <p>
+     *
      * 结果:
      * 灰姑娘获得口红的锁
      * 白雪公主获得镜子的锁
      * 白雪公主获得口红的锁
      * 灰姑娘获得镜子的锁
-     *
      * @throws InterruptedException
      */
     private void makeup() throws InterruptedException {

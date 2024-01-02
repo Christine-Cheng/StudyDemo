@@ -5,7 +5,7 @@ import java.util.concurrent.CountDownLatch;
 /**
  * @Describe: 辅助类: 计数器(减法)
  * 允许一个或多个线程等待直到在其他线程中执行的一组操作完成的同步辅助。
- * <p>
+ *
  * CountDownLatch用给定的计数初始化。
  * await方法阻塞，直到由于countDown()方法的调用而导致当前计数达到零，之后所有等待线程被释放，并且任何后续的await调用立即返回。
  * 这是一个一次性的现象 - 计数无法重置。 如果您需要重置计数的版本，请考虑使用CyclicBarrier 。
@@ -18,7 +18,7 @@ public class TestCountDownLatch {
         
         //总数是6 必须要执行的任务的时候吗,再使用
         CountDownLatch countDownLatch = new CountDownLatch(6);
-        
+    
         for (int i = 1; i <= 6; i++) {
             new Thread(() -> {
                 System.out.println(Thread.currentThread().getName() + "Go Out");

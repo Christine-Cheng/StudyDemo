@@ -2,6 +2,7 @@ package com.kuangstudy.multithreading.KS04ThreadStatus;
 
 /**
  * @Describe: 观察线程状态 getState()
+ *
  * @Author Happy
  * @Create 2023/3/26-10:14
  **/
@@ -26,7 +27,7 @@ public class TestStatus {
         thread.start();
         state = thread.getState();
         System.out.println(state);//Run
-        
+    
         while (state != Thread.State.TERMINATED) {//只要线程不中止,就一直输出状态
             try {
                 Thread.sleep(100);
@@ -36,7 +37,7 @@ public class TestStatus {
             state = thread.getState();
             System.out.println(state);
         }
-        
+    
         /**
          * java.lang.IllegalThreadStateException
          * 	at java.lang.Thread.start(Thread.java:710)

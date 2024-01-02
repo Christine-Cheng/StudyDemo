@@ -72,7 +72,7 @@ public class CallableTest {
          * 可以通过 FutureTask 启动Callable 所以 new Thread(new FutureTask<V>(Callable)).start();
          *
          */
-        
+    
         /**
          *  futureTask.get();//这个get()可能会发生阻塞,  处理方式是放到最后 或者 异步通讯来处理.
          */
@@ -80,9 +80,9 @@ public class CallableTest {
         FutureTask futureTask = new FutureTask(myThread);//适配类
         new Thread(futureTask, "AAA").start();
         new Thread(futureTask, "BBB").start();// 第二次调用执行，会有结果缓存，不用再次计算
-        
+    
         System.out.println(Thread.currentThread().getName() + " OK");
-        
+    
         String result = (String) futureTask.get();//这个get()可能会发生阻塞,处理方式是放到最后 或者 异步通讯来处理.
         System.out.println("resutl--->" + result);
     }

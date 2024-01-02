@@ -13,7 +13,7 @@ import java.util.concurrent.TimeUnit;
  **/
 public class EightLock04 {
     public static void main(String[] args) {
-        
+    
         Phone4 phone4 = new Phone4();
         new Thread(() -> {
             phone4.sendSms();

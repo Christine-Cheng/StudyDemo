@@ -42,21 +42,21 @@ public class Test03_lambda {
             }
         };
         adore.adoreLambda(3000);
-        
-        
+    
+    
         //5.用lambda简化
         adore = (int loveTimes) -> {
             System.out.println("adore5: say love you " + loveTimes + " lambda简化1");
         };
         adore.adoreLambda(3000);
-        
-        
+    
+    
         //6.用lambda简化
         adore = (loveTimes) -> {
             System.out.println("adore6: say love you " + loveTimes + " lambda简化2");
         };
         adore.adoreLambda(3000);
-        
+    
         //7.用lambda简化
         adore = loveTimes -> {
             System.out.println("adore7: say love you " + loveTimes + " lambda简化3");

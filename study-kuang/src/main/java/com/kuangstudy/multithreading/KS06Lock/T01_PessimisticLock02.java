@@ -15,7 +15,7 @@ public class T01_PessimisticLock02 {
             Thread T01 = new Thread(new Runnable() {
                 @Override
                 public void run() {
-                    
+    
                     while (number.get() < 10) {
                         System.out.println("ThreadName" + Thread.currentThread().getName() + ":--->" + number.incrementAndGet());
                     }

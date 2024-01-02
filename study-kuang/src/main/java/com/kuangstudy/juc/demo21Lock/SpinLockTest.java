@@ -15,7 +15,7 @@ public class SpinLockTest {
         
         //底层使用的是自旋锁CAS
         SpinLockDemo spinLockDemo = new SpinLockDemo();
-        
+    
         new Thread(() -> {
             spinLockDemo.lock();//T1加锁
             try {
@@ -26,9 +26,9 @@ public class SpinLockTest {
                 spinLockDemo.unlock();//T1解锁
             }
         }, "T1").start();
-        
+    
         TimeUnit.SECONDS.sleep(1);//中间延迟
-        
+    
         new Thread(() -> {
             spinLockDemo.lock();//T2加锁
             try {

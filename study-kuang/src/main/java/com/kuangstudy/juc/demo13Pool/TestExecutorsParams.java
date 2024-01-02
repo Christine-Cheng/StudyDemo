@@ -14,16 +14,16 @@ import java.util.concurrent.TimeUnit;
  * workQueue,//存放任务的阻塞队列
  * Executors.defaultThreadFactory(),//线程工厂(一般不改动)
  * new ThreadPoolExecutor.AbortPolicy() //拒绝策略   队列满了,不处理这该线程,抛出异常.
- * <p>
+ *
  * 四种不同的拒绝策略
  * new ThreadPoolExecutor.AbortPolicy() //拒绝策略   队列满了,不处理这该线程,抛出异常.
  * new ThreadPoolExecutor.CallerRunsPolicy() //哪里来的回到哪里 那个线程来的回到哪里,不执行
  * new ThreadPoolExecutor.DiscardPolicy() //队列满了,不会抛出异常,丢弃任务
  * new ThreadPoolExecutor.DiscardOldestPolicy() //队列满了尝试和最早的竞争,也不会抛出异常
- * <p>
+ *
  * 核心线程和最大线程数的设置:
  * 注：IO密集型（某大厂实践经验）
- * 核心线程数 = CPU核数 / （1-阻塞系数）
+ *     核心线程数 = CPU核数 / （1-阻塞系数）
  * 或着
  * CPU密集型：核心线程数 = CPU核数 + 1
  * IO密集型：核心线程数 = CPU核数 * 2

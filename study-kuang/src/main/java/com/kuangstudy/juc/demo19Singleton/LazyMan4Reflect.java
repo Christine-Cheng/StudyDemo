@@ -49,7 +49,7 @@ public class LazyMan4Reflect {
         Constructor<LazyMan4Reflect> lazyManDeclConst = LazyMan4Reflect.class.getDeclaredConstructor(null);
         lazyManDeclConst.setAccessible(true);
         LazyMan4Reflect lazyMan2 = lazyManDeclConst.newInstance();
-        
+    
         System.out.println(lazyMan1);
         System.out.println(lazyMan2);
     }

@@ -33,50 +33,50 @@ public class CASDemoAtomicReference {
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
-            
+    
             System.out.println(atomicStampedReference.compareAndSet(
                     100,
                     101,
                     atomicStampedReference.getStamp(),
                     atomicStampedReference.getStamp() + 1));
             System.out.println("A2--->" + atomicStampedReference.getStamp());
-            
-            
+    
+    
             System.out.println(atomicStampedReference.compareAndSet(
                     101,
                     100,
                     atomicStampedReference.getStamp(),
                     atomicStampedReference.getStamp() + 1));
             System.out.println("A3--->" + atomicStampedReference.getStamp());
-            
+    
         }, "A").start();
         
         
         new Thread(() -> {
-            
+    
             System.out.println("B1--->" + atomicStampedReference.getStamp());
-            
+    
             try {
                 TimeUnit.SECONDS.sleep(2);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
-            
+    
             System.out.println(atomicStampedReference.compareAndSet(
                     100,
                     106,
                     atomicStampedReference.getStamp(),
                     atomicStampedReference.getStamp() + 1));
             System.out.println("B2--->" + atomicStampedReference.getStamp());
-            
-            
+    
+    
             System.out.println(atomicStampedReference.compareAndSet(
                     106,
                     100,
                     atomicStampedReference.getStamp(),
                     atomicStampedReference.getStamp() + 1));
             System.out.println("B3--->" + atomicStampedReference.getStamp());
-            
+    
         }, "B").start();
     }
 }

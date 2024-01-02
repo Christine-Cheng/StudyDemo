@@ -28,7 +28,7 @@ class Player implements Runnable {
     
     @Override
     public void run() {
-        
+    
         for (int i = 0; i < 20; i++) {//模拟20小时
             if (i % 2 == 0) {
                 tv.performing("快乐大本营");

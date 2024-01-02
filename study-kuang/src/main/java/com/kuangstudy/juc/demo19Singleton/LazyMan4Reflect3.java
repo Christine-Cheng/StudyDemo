@@ -69,14 +69,12 @@ public class LazyMan4Reflect3 {
      * 结果:
      * com.kuangstudy.juc.demo20Singleton.LazyMan4Reflect3@72ea2f77
      * com.kuangstudy.juc.demo20Singleton.LazyMan4Reflect3@33c7353a
-     *
      * @param args
-     *
      * @throws Exception
      */
     public static void main(String[] args) throws Exception {
-        
-        
+    
+    
         Constructor<LazyMan4Reflect3> lazyManDeclConst = LazyMan4Reflect3.class.getDeclaredConstructor(null);
         lazyManDeclConst.setAccessible(true);
         //反射修改了字段值,破坏了构造器的 第三重检测锁+加上标记位判断

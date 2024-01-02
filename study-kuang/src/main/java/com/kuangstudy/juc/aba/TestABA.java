@@ -11,13 +11,13 @@ public class TestABA {
     
     /**
      * 例子模拟的是A、B两个线程操作一个资源ai，A的执行速度比B的快，在B执行前，A就已经将ai的值改为5之后马上又把ai的值改回为4，但是B不感知，所以最后B就修改成功了。
-     * <p>
+     *
      * 执行结果:
      * A是否成功将ai的值修改为5：true
      * A是否成功将ai的值修改为4：true
      * B是否成功将ai的值修改为10：true
      * ai最终的值为：10
-     * <p>
+     *
      * 解决办法:核心思路：加版本号
      * 1.使用AtomicStampedReference解决ABA问题
      * 2.使用AtomicMarkableReference解决ABA问题

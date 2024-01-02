@@ -41,14 +41,14 @@ public class LazyManEnum {
 class LazyManEnumTest {
     
     public static void main(String[] args) throws NoSuchMethodException, InvocationTargetException, InstantiationException, IllegalAccessException {
-        
+    
         Constructor<LazyManEnum> lazyManEnumConstructor = LazyManEnum.class.getDeclaredConstructor(null);
         LazyManEnum lazyManEnum = lazyManEnumConstructor.newInstance();
         LazyManEnum lazyManEnum2 = lazyManEnumConstructor.newInstance();
-        
+    
         System.out.println(lazyManEnum);
         System.out.println(lazyManEnum2);
-        
+    
     }
     
 }

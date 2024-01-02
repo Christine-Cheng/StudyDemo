@@ -12,7 +12,7 @@ import java.util.concurrent.ExecutionException;
  **/
 public class TestFuture {
     public static void main(String[] args) throws ExecutionException, InterruptedException {
-        
+    
         /**
          * 执行结果:
          * //测试CompletableFuture,Future异步执行不占用程序执行时间
@@ -33,8 +33,8 @@ public class TestFuture {
         });
         System.out.println("测试CompletableFuture,Future异步执行不占用程序执行时间");
         completableFuture.get();//获取阻塞执行结果*/
-        
-        
+    
+    
         /**
          * 执行结果:
          * T--->null

@@ -17,7 +17,7 @@ public class SpinLockDemo {
     public void lock() {
         Thread thread = Thread.currentThread();
         System.out.println(thread.getName() + "--->myLock");
-        
+    
         //自旋锁
         while (threadAtomicReference.compareAndSet(null, thread)) {
         

@@ -31,7 +31,7 @@ public class TestSemaphore {
                 }
             }).start();
         }
-        
+    
         /**
          * 执行结果
          * Thread-0抢到了车位

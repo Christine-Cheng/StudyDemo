@@ -3,13 +3,16 @@ package com.kuangstudy.juc.demo04EightLock;
 import java.util.concurrent.TimeUnit;
 
 /**
- * @Describe: 8锁问题_关于锁的8个问题
+ * @Describe:
+ * 8锁问题_关于锁的8个问题
  * 问题7.一个对象,一个静态的同步方法,一个普通同步方法,是先执行 发短信 还是 打电话 ? 结果--->  打电话
- * <p>
+ *
  * 结论:
  * 被synchronized和static修饰的方法，锁的对象是类的class对象。仅仅被synchronized修饰的方
  * 法，锁的对象是方法的调用者。因为两个方法锁的对象不是同一个，所以两个方法用的不是同一个锁，
  * 后调用的方法不需要等待先调用的方法。
+ *
+ *
  * @Author Happy
  * @Create 2023/4/17-17:33
  **/

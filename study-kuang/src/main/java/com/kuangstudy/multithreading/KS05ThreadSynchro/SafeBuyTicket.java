@@ -8,7 +8,7 @@ package com.kuangstudy.multithreading.KS05ThreadSynchro;
 public class SafeBuyTicket {
     public static void main(String[] args) {
         BuyTicket2 buyTicket2 = new BuyTicket2();
-        
+    
         new Thread(buyTicket2, "老王").start();
         new Thread(buyTicket2, "翠花").start();
         new Thread(buyTicket2, "麻子").start();

@@ -6,12 +6,13 @@ import java.util.concurrent.locks.ReentrantLock;
 
 /**
  * @Describe: 精确通知顺序访问
- * <p>
+ *
  * 题目：多线程之间按顺序调用，实现 A->B->C
  * 三个线程启动，要求如下：
  * AA 打印5次，BB 打印10次。CC打印15次，依次循环
- * <p>
+ *
  * 重点：标志位
+ *
  * @Author Happy
  * @Create 2023/4/17-15:25
  **/
@@ -44,7 +45,7 @@ class DataCondition {
         lock.lock();
         try {
             //判断等待-> 执行业务 -> 通知唤醒
-            
+    
             //判断等待
             while (number != 1) {
                 //等待
@@ -56,7 +57,7 @@ class DataCondition {
             //for (int i = 0; i < 5; i++) {
             //    System.out.println(Thread.currentThread().getName() + "--->AAAAA");
             //}
-            
+    
             //通知,指定的干活！
             //唤醒,唤醒指定的人--->B
             number = 2;
@@ -84,7 +85,7 @@ class DataCondition {
             //for (int i = 0; i < 5; i++) {
             //    System.out.println(Thread.currentThread().getName() + "--->BBBBB");
             //}
-            
+    
             //通知,指定的干活！
             //通知唤醒,唤醒指定的人--->C
             number = 3;
@@ -100,7 +101,7 @@ class DataCondition {
         lock.lock();
         try {
             //判断等待-> 执行业务 -> 通知唤醒
-            
+    
             //判断等待
             while (number != 3) {
                 //等待
@@ -112,7 +113,7 @@ class DataCondition {
             //for (int i = 0; i < 5; i++) {
             //    System.out.println(Thread.currentThread().getName() + "--->CCCCC");
             //}
-            
+    
             //通知,指定的干活！
             //通知唤醒,唤醒指定的人--->A
             number = 1;

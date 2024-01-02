@@ -16,7 +16,7 @@ public class TestDaemon {
     public static void main(String[] args) {
         God god = new God();
         You you = new You();
-        
+    
         Thread daemon = new Thread(god);
         daemon.setDaemon(true);//默认是false表示用户线程,一般的线程都是用户线程
         daemon.start();//守护线程启动
