@@ -11,10 +11,11 @@
     <packaging>pom</packaging>
 
     <modules>
+        <module>aop</module>
         <module>bill</module>
         <module>study-kuang</module>
+        <module>study-web-service</module>
         <module>test</module>
-        <module>aop</module>
     </modules>
     <modelVersion>4.0.0</modelVersion>
 

@@ -5,7 +5,9 @@
         <!--<groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
         <version>3.2.1</version>
-        <relativePath/> &lt;!&ndash; lookup parent from repository &ndash;&gt;-->
+        <relativePath/> -->
+        <!-- lookup parent from repository -->
+
 
         <groupId>com.study</groupId>
         <artifactId>study-demo</artifactId>
@@ -13,10 +15,9 @@
     </parent>
 
     <groupId>com.anunnaki</groupId>
-    <artifactId>study-web</artifactId>
+    <artifactId>study-web-service</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>study-web</name>
-    <description>study-web</description>
+    <name>study-web-service</name>
 
     <modelVersion>4.0.0</modelVersion>
 
