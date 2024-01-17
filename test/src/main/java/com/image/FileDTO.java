@@ -17,4 +17,5 @@ public class FileDTO {
     private String suffix;
     private Date createTime;
     private Integer occupySize;
+    
 }
