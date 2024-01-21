@@ -1,4 +1,4 @@
-package com.test;
+package com.test.time;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;

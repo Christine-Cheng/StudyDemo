@@ -1,8 +1,11 @@
-package com.test;
+package com.test.collection;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Comparator;
+import java.util.Date;
+import java.util.List;
 
 /**
  * @program: MyTest

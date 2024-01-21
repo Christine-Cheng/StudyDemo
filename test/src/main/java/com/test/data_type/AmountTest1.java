@@ -1,4 +1,4 @@
-package com.test;
+package com.test.data_type;
 
 import java.math.BigDecimal;
 
