@@ -34,6 +34,19 @@ public class TestSortComparator {
             System.out.println(dog);
         });
         
+        //排序前
+        // Dog(name=旺财1, age=1, serialNumber=1)
+        // Dog(name=旺财2, age=2, serialNumber=2)
+        // Dog(name=旺财3, age=2, serialNumber=3)
+        // Dog(name=旺财4, age=3, serialNumber=4)
+        // Dog(name=旺财5, age=4, serialNumber=5)
+        // 排序后
+        // Dog(name=旺财5, age=4, serialNumber=5)
+        // Dog(name=旺财4, age=3, serialNumber=4)
+        // Dog(name=旺财2, age=2, serialNumber=2)
+        // Dog(name=旺财3, age=2, serialNumber=3)
+        // Dog(name=旺财1, age=1, serialNumber=1)
+        
     }
     
 }
