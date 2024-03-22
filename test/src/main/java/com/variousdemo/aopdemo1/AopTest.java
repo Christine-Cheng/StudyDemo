@@ -1,4 +1,4 @@
-package com.aop;
+package com.variousdemo.aopdemo1;
 
 
 import org.junit.jupiter.api.Test;

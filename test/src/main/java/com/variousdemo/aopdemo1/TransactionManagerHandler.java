@@ -1,4 +1,4 @@
-package com.aop;
+package com.variousdemo.aopdemo1;
 
 import org.aspectj.lang.annotation.After;
 import org.aspectj.lang.annotation.AfterReturning;
@@ -25,7 +25,7 @@ public class TransactionManagerHandler implements TransactionSynchronization {
     * 5.注入 由spring完成,切面类包裹住对象,创建出代理对象
     * */
     
-    @Pointcut("execution(public void com.aop.UserServiceImpl.insert())")
+    @Pointcut("execution(public void com.variousdemo.aopdemo1.UserServiceImpl.insert())")
     public void pointcout(){}
     
     @Before("pointcout()")
