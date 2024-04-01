@@ -1,4 +1,4 @@
-package com.lxx.spb2hotdev.annotation;
+package com.variousdemo.aopdemo2;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;

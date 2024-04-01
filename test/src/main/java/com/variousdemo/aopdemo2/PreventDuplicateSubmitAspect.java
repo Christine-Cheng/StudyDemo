@@ -1,6 +1,5 @@
 package com.variousdemo.aopdemo2;
 
-import com.lxx.spb2hotdev.annotation.PreventDuplicateSubmit;
 import lombok.extern.slf4j.Slf4j;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.Around;
