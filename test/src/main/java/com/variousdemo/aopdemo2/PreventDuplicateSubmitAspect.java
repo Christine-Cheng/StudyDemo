@@ -8,7 +8,7 @@ import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Pointcut;
 import org.aspectj.lang.reflect.MethodSignature;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.core.LocalVariableTableParameterNameDiscoverer;
+import org.springframework.core.DefaultParameterNameDiscoverer;
 import org.springframework.core.ParameterNameDiscoverer;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.expression.EvaluationContext;
@@ -28,7 +28,8 @@ public class PreventDuplicateSubmitAspect {
     @Autowired
     private RedisTemplate redisTemplate;
     
-    private ParameterNameDiscoverer discoverer = new LocalVariableTableParameterNameDiscoverer();
+    // private ParameterNameDiscoverer discoverer = new LocalVariableTableParameterNameDiscoverer();
+    private ParameterNameDiscoverer discoverer = new DefaultParameterNameDiscoverer();
     
     private ExpressionParser parser = new SpelExpressionParser();
     
