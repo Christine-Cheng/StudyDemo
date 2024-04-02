@@ -1,5 +1,7 @@
 package com.variousdemo.design_patterns.strategy;
 
+import org.springframework.stereotype.Service;
+
 import java.util.List;
 
 /**
@@ -7,6 +9,7 @@ import java.util.List;
  * @Author Happy
  * @Create 2024-04-02 11:06:12
  **/
+@Service
 public class AttachService002Impl extends AbstractAttachService {
     
     /**
@@ -42,5 +45,9 @@ public class AttachService002Impl extends AbstractAttachService {
     public boolean support(AttachParamVO attachParamVO) {
         return BusinessScene.SCENE_002.getCode().equals(attachParamVO.getScene())
                 && BusinessType.TYPE_002.getCode().equals(attachParamVO.getServerType());
+    }
+    
+    public void otherMethod() {
+        System.out.println("otherMethod");
     }
 }
