@@ -1,5 +1,12 @@
-package com.variousdemo.design_patterns.strategy;
+package com.variousdemo.design_patterns.image_strategy.service.impl;
 
+import com.variousdemo.design_patterns.image_strategy.constant.BusinessSceneEnum;
+import com.variousdemo.design_patterns.image_strategy.constant.BusinessTypeEnum;
+import com.variousdemo.design_patterns.image_strategy.model.Attach;
+import com.variousdemo.design_patterns.image_strategy.model.vo.AttachConfigVO;
+import com.variousdemo.design_patterns.image_strategy.model.vo.AttachParamVO;
+import com.variousdemo.design_patterns.image_strategy.model.vo.AttachUploadResultVO;
+import com.variousdemo.design_patterns.image_strategy.service.AbstractAttachService;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -19,6 +26,8 @@ public class AttachService002Impl extends AbstractAttachService {
      */
     @Override
     public List<AttachConfigVO> getConfigList(AttachParamVO attachParamVO) {
+        
+        // 获取上传配置
         return null;
     }
     
@@ -43,8 +52,8 @@ public class AttachService002Impl extends AbstractAttachService {
      */
     @Override
     public boolean support(AttachParamVO attachParamVO) {
-        return BusinessScene.SCENE_002.getCode().equals(attachParamVO.getScene())
-                && BusinessType.TYPE_002.getCode().equals(attachParamVO.getServerType());
+        return BusinessSceneEnum.SCENE_002.getCode().equals(attachParamVO.getScene())
+                && BusinessTypeEnum.TYPE_002.getCode().equals(attachParamVO.getServerType());
     }
     
     public void otherMethod() {

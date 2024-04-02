@@ -1,11 +1,15 @@
-package com.variousdemo.design_patterns.strategy;
+package com.variousdemo.design_patterns.image_strategy.service;
 
+import com.variousdemo.design_patterns.image_strategy.model.Attach;
+import com.variousdemo.design_patterns.image_strategy.model.vo.AttachConfigVO;
+import com.variousdemo.design_patterns.image_strategy.model.vo.AttachParamVO;
+import com.variousdemo.design_patterns.image_strategy.model.vo.AttachUploadResultVO;
 import lombok.extern.slf4j.Slf4j;
 
 import java.util.List;
 
 /**
- * @Describe: 策略模式 抽象方法 处理通用的 上传业务逻辑、获取附件配置列表
+ * @Describe: 抽象类做模板方法 处理通用的 上传业务逻辑、获取附件配置列表
  * @Author Happy
  * @Create 2024-03-28 15:17:54
  **/

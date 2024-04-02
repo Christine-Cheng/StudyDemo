@@ -1,8 +1,0 @@
-通过 AttachServiceManager.getAttachServiceInstance 首先获取配置
-
-
-继承重写
-public class AttachService001Impl extends AbstractAttachService
-先判断业务场景是否支持
-若需要特殊处理,可以重写getConfigList()和upload()方法
-再者加入其他方法

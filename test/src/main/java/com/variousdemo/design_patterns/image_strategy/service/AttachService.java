@@ -1,4 +1,9 @@
-package com.variousdemo.design_patterns.strategy;
+package com.variousdemo.design_patterns.image_strategy.service;
+
+import com.variousdemo.design_patterns.image_strategy.model.Attach;
+import com.variousdemo.design_patterns.image_strategy.model.vo.AttachConfigVO;
+import com.variousdemo.design_patterns.image_strategy.model.vo.AttachParamVO;
+import com.variousdemo.design_patterns.image_strategy.model.vo.AttachUploadResultVO;
 
 import java.util.List;
 

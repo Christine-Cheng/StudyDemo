@@ -1,4 +1,4 @@
-package com.variousdemo.design_patterns.strategy;
+package com.variousdemo.design_patterns.image_strategy.model.vo;
 
 import lombok.Data;
 

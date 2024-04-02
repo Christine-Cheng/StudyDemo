@@ -1,4 +1,4 @@
-package com.variousdemo.design_patterns.strategy;
+package com.variousdemo.design_patterns.image_strategy.controller;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.RestController;
