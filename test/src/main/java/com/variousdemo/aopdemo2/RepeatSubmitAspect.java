@@ -19,7 +19,7 @@ import java.util.Objects;
 import java.util.concurrent.TimeUnit;
 
 /**
- * @Describe:
+ * @Describe: 简单的放重复提交锁, 获取不到锁抛出异常, 不会等待(锁和事务同时存在时, 锁在事务之外, 事务的优先级是Ordered.LOWEST_PRECEDENCE)
  * @Author Happy
  * @Create 2024-04-01 16:43:47
  **/
