@@ -6,7 +6,7 @@ import com.variousdemo.design_patterns.image_strategy.model.Attach;
 import com.variousdemo.design_patterns.image_strategy.model.vo.AttachConfigVO;
 import com.variousdemo.design_patterns.image_strategy.model.vo.AttachParamVO;
 import com.variousdemo.design_patterns.image_strategy.model.vo.AttachUploadResultVO;
-import com.variousdemo.design_patterns.image_strategy.service.AbstractAttachService;
+import com.variousdemo.design_patterns.image_strategy.service.AbstractAttachServiceInterface;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -17,7 +17,7 @@ import java.util.List;
  * @Create 2024-04-02 11:06:12
  **/
 @Service
-public class AttachService002Impl extends AbstractAttachService {
+public class AttachServiceInterface002Impl extends AbstractAttachServiceInterface {
     
     /**
      * @param attachParamVO
@@ -56,6 +56,10 @@ public class AttachService002Impl extends AbstractAttachService {
                 && BusinessTypeEnum.TYPE_002.getCode().equals(attachParamVO.getServerType());
     }
     
+    
+    /**
+     * 特有的方法
+     */
     public void otherMethod() {
         System.out.println("otherMethod");
     }

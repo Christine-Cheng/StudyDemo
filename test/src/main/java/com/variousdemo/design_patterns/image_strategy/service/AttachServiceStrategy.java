@@ -17,12 +17,12 @@ import java.util.List;
 @Component
 public class AttachServiceStrategy {
     @Autowired
-    private List<AttachService> attachServiceList;
+    private List<AttachServiceInterface> attachServiceInterfaceList;
     
-    private AttachService getAttachServiceInstance(AttachParamVO attachParamVO) {
-        for (AttachService attachService : attachServiceList) {
-            if (attachService.support(attachParamVO)) {
-                return attachService;
+    private AttachServiceInterface getAttachServiceInstance(AttachParamVO attachParamVO) {
+        for (AttachServiceInterface attachServiceInterface : attachServiceInterfaceList) {
+            if (attachServiceInterface.support(attachParamVO)) {
+                return attachServiceInterface;
             }
         }
         log.error("AttachServiceManager 当前场景暂时不支持上传附件:[{}]", JSONUtil.toJsonStr(attachParamVO));
