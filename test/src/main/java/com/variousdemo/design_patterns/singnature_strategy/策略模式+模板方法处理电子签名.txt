@@ -2,7 +2,7 @@
 在spring启动的时候所有的类加载到IOC容器中(bean实例化)
 实现SignatureInterface接口的类会加载到SignatureStrategy.signatureInterfaceList的集合中
 当调用SignatureStrategy.getSignatureServiceInstance()方法的时候
-遍历判断SignatureImpl实现类中重写的support()方法得到的返回值,进行筛选,而后进行具体的业务处理
+遍历判断SignatureImpl实现类中重写的support()方法,和入参进行比较匹配,而后进入具体的业务处理
 相当于把实现类重写support()方法的判断,类比于switch case
 
 而抽象类AbstractSignatureInterface作为方法模板,所有公共方法都可以抽离出来放在该类中.

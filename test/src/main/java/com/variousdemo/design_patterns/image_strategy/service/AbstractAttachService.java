@@ -14,7 +14,7 @@ import java.util.List;
  * @Create 2024-03-28 15:17:54
  **/
 @Slf4j
-public abstract class AbstractAttachServiceInterface implements AttachServiceInterface {
+public abstract class AbstractAttachService implements AttachService {
     @Override
     public List<AttachConfigVO> getConfigList(AttachParamVO attachParamVO) {
         log.info("AbstractAttachService getConfigList");

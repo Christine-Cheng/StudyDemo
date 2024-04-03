@@ -3,7 +3,7 @@ package com.variousdemo.design_patterns.image_strategy.service.impl;
 import com.variousdemo.design_patterns.image_strategy.constant.BusinessSceneEnum;
 import com.variousdemo.design_patterns.image_strategy.constant.BusinessTypeEnum;
 import com.variousdemo.design_patterns.image_strategy.model.vo.AttachParamVO;
-import com.variousdemo.design_patterns.image_strategy.service.AbstractAttachServiceInterface;
+import com.variousdemo.design_patterns.image_strategy.service.AbstractAttachService;
 import org.springframework.stereotype.Service;
 
 /**
@@ -12,7 +12,7 @@ import org.springframework.stereotype.Service;
  * @Create 2024-03-28 15:21:56
  **/
 @Service
-public class AttachServiceInterface001Impl extends AbstractAttachServiceInterface {
+public class AttachService001Impl extends AbstractAttachService {
     
     /**
      * 重写support方法判断是否支持该业务

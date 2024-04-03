@@ -6,7 +6,7 @@ import com.variousdemo.design_patterns.image_strategy.model.Attach;
 import com.variousdemo.design_patterns.image_strategy.model.vo.AttachConfigVO;
 import com.variousdemo.design_patterns.image_strategy.model.vo.AttachParamVO;
 import com.variousdemo.design_patterns.image_strategy.model.vo.AttachUploadResultVO;
-import com.variousdemo.design_patterns.image_strategy.service.AbstractAttachServiceInterface;
+import com.variousdemo.design_patterns.image_strategy.service.AbstractAttachService;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -17,7 +17,7 @@ import java.util.List;
  * @Create 2024-04-02 11:06:12
  **/
 @Service
-public class AttachServiceInterface002Impl extends AbstractAttachServiceInterface {
+public class AttachService002Impl extends AbstractAttachService {
     
     /**
      * @param attachParamVO
