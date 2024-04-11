@@ -9,8 +9,10 @@ import org.springframework.stereotype.Service;
  **/
 @Service
 public class EncryptDecryptService {
-    private static final String EncryptKey = "123456";
-    private static final String DecryptKey = "123456";
+    // 加密key
+    private static final String ENCRYPT_KEY = "123456";
+    // 解密key
+    private static final String DECRYPT_KEY = "123456";
     
     public String encrypt(String value) {
         // todo 加密

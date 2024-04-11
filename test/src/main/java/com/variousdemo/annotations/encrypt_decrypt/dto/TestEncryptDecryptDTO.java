@@ -1,6 +1,6 @@
 package com.variousdemo.annotations.encrypt_decrypt.dto;
 
-import com.variousdemo.annotations.encrypt_decrypt.EncryptDecrypt;
+import com.variousdemo.annotations.encrypt_decrypt.EncryptDecryptFields;
 import lombok.Data;
 
 /**
@@ -10,6 +10,6 @@ import lombok.Data;
  **/
 @Data
 public class TestEncryptDecryptDTO {
-    @EncryptDecrypt(encryptKey = "")
+    @EncryptDecryptFields()
     private String name;
 }
