@@ -28,4 +28,5 @@ spring:
           username: ENC(xxxxx)
           password: ENC(xxxxx)
           driver-class-name: com.mysql.jdbc.Driver
-
+logging:
+  config: classpath:logback-spring.xml

@@ -6,13 +6,13 @@ import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
 /**
- * @Describe: 需要加解密的变量(属性)切点
+ * @Describe: 需要加解密的方法
  * @Author Happy
- * @Create 2024-04-07 17:59:52
+ * @Create 2024-04-08 10:43:36
  **/
 @Retention(RetentionPolicy.RUNTIME)
-@Target({ElementType.METHOD, ElementType.FIELD})
+@Target({ElementType.METHOD})
 public @interface EncryptDecryptMethod {
     String value() default "";
-   
+    
 }
