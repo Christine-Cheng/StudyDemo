@@ -19,12 +19,32 @@
     </modules>
     <modelVersion>4.0.0</modelVersion>
 
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>3.2.4</version>
+        <relativePath/>
+    </parent>
+
+    <!-- 依赖管理 -->
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-dependencies</artifactId>
+                <version>${spring.boot.version}</version><!-- 配合parent修改版本 -->
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
-        <spring.boot.version>3.2.1</spring.boot.version>
+        <spring.boot.version>3.2.4</spring.boot.version><!-- 配合parent修改版本 -->
         <spring.version>5.3.30</spring.version>
         <druid.version>1.2.6</druid.version>
         <mysql.version>8.0.25</mysql.version>
@@ -303,23 +323,45 @@
 
     <build>
         <plugins>
-            <!--编译插件-->
+            <!-- Maven Compiler Plugin Configuration -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
-                <!--插件名称-->
                 <artifactId>maven-compiler-plugin</artifactId>
-                <!--插件版本-->
-                <version>3.8.1</version>
-                <!--插件配置信息-->
                 <configuration>
-                    <!--编译环境 JDK 版本-->
-                    <source>${maven.compiler.source}</source>
-                    <!--运行环境 JDK 版本-->
-                    <target>${maven.compiler.target}</target>
-                    <!--编码格式-->
-                    <encoding>${project.build.sourceEncoding}</encoding>
+                    <source>${java.version}</source> <!-- Specify JDK version explicitly for clarity -->
+                    <target>${java.version}</target> <!-- Ensure compatibility with your project's JDK -->
+                    <encoding>${project.build.sourceEncoding}
+                    </encoding> <!-- Standard encoding for project source files -->
                 </configuration>
             </plugin>
         </plugins>
+        <pluginManagement>
+            <plugins>
+                <!-- Spring Boot Maven Plugin Configuration -->
+                <plugin>
+                    <groupId>org.springframework.boot</groupId>
+                    <artifactId>spring-boot-maven-plugin</artifactId>
+                    <version>${spring.boot.version}</version> <!-- Example version, update as needed -->
+                    <configuration>
+                        <excludes>
+                            <executions>
+                                <execution>
+                                    <goals>
+                                        <goal>repackage</goal> <!-- Repackages the application to be executable -->
+                                    </goals>
+                                </execution>
+                            </executions>
+
+                            <!-- Exclude Lombok if it's not needed for your project -->
+                            <exclude>
+                                <groupId>org.projectlombok</groupId>
+                                <artifactId>lombok</artifactId>
+                            </exclude>
+                        </excludes>
+                    </configuration>
+                </plugin>
+            </plugins>
+        </pluginManagement>
     </build>
+
 </project>
