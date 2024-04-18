@@ -8,6 +8,7 @@ public class StudyWebApplication {
     
     public static void main(String[] args) {
         SpringApplication.run(StudyWebApplication.class, args);
+        System.out.println("study-web-service启动成功");
     }
     
 }

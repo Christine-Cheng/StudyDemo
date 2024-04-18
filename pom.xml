@@ -7,7 +7,6 @@
     <artifactId>study-demo</artifactId>
     <version>1.0-SNAPSHOT</version>
     <name>StudyDemo</name>
-
     <packaging>pom</packaging>
 
     <modules>
@@ -15,7 +14,7 @@
         <module>bill</module>
         <module>study-kuang</module>
         <module>study-web-service</module>
-        <module>test</module>
+        <module>study-test</module>
     </modules>
     <modelVersion>4.0.0</modelVersion>
 
